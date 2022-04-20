@@ -45,13 +45,18 @@ VOID Logger::PrintLog(const WCHAR* fmt, ...)
 std::wstring Logger::LogDirectory()
 {
 	WCHAR Path[1024];
-	WCHAR* AppDataLocal;
-	SHGetKnownFolderPath(FOLDERID_RoamingAppData, 0, nullptr, &AppDataLocal);
-	wcscpy_s(Path, AppDataLocal);
-	wcscat_s(Path, L"\\");
-	wcscat_s(Path, PerGameSettings::GameName());
-	CreateDirectory(Path, NULL);
+	#ifdef _DEBUG
+		wcscpy_s(Path, L".");
+	#else
+		WCHAR* AppDataLocal;
+		SHGetKnownFolderPath(FOLDERID_RoamingAppData, 0, nullptr, &AppDataLocal);
+		wcscpy_s(Path, AppDataLocal);
+		wcscat_s(Path, L"\\");
+		wcscat_s(Path, PerGameSettings::GameName());
+		CreateDirectory(Path, NULL);
+	#endif
 	wcscat_s(Path, L"\\Log");
+	OutputDebugString(Path);
 	CreateDirectory(Path, NULL);
 
 	return Path;
