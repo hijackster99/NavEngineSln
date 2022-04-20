@@ -52,7 +52,7 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_MAINICON               ICON                    "Assets\\Icons\\icon_temp.ico"
+IDI_MAINICON            ICON                    "Assets\\Icons\\icon_temp.ico"
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -101,8 +101,9 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_PERGAMENAME         "Blank Project"
+    IDS_PERGAMENAME         "BlankProject"
     IDS_WINDOWCLASS         "NavEngine"
+    IDS_SHORTNAME           "BP"
 END
 
 #endif    // English (United States) resources

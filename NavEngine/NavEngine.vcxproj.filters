@@ -19,24 +19,66 @@
     <Filter Include="Source\pch">
       <UniqueIdentifier>{a2982e6a-e056-4174-a192-3928da1a1b03}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Private\Platform">
+      <UniqueIdentifier>{4fdfdf59-257b-4695-be98-42c45ee8c3c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\Platform">
+      <UniqueIdentifier>{dc2a76f0-832b-4609-bb23-3b51dcb178bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\Platform\Windows">
+      <UniqueIdentifier>{cc65483f-6357-4741-a6cd-905387daeba7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private\Platform\Windows">
+      <UniqueIdentifier>{f47622a8-37bc-40fa-80eb-2416dcdf3882}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private\Common">
+      <UniqueIdentifier>{16b5aafe-74ef-4b99-833d-18bfde038280}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\Common">
+      <UniqueIdentifier>{7e8e0ebd-13d6-4edd-b600-4dbb00ad1f42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private\Core">
+      <UniqueIdentifier>{3aa4a13d-7adf-4d39-8d33-4fbdcf160a34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public\Core">
+      <UniqueIdentifier>{63a0cfef-9c1c-436e-b18f-87b1447c8203}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\NavEngine.cpp">
       <Filter>Source\pch</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Platform\WIN32\IApplication.cpp">
-      <Filter>Source\Private</Filter>
+    <ClCompile Include="Source\Common\Logger.cpp">
+      <Filter>Source\Private\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Platform\Windows\IApplication.cpp">
+      <Filter>Source\Private\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Core\PerGameSettings.cpp">
+      <Filter>Source\Private\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Time.cpp">
+      <Filter>Source\Private\Common</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\NavEngine.h">
       <Filter>Source\pch</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Platform\WIN32\IApplication.h">
-      <Filter>Source\Public</Filter>
+    <ClInclude Include="Source\Common\Logger.h">
+      <Filter>Source\Public\Common</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Platform\WIN32\WinEntry.h">
-      <Filter>Source\Public</Filter>
+    <ClInclude Include="Source\Platform\Windows\IApplication.h">
+      <Filter>Source\Public\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Platform\Windows\WinEntry.h">
+      <Filter>Source\Public\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Core\PerGameSettings.h">
+      <Filter>Source\Public\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\Time.h">
+      <Filter>Source\Public\Common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

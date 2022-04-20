@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "Application.h"
-#include "Platform/WIN32/WinEntry.h"
+#include "Platform/Windows/WinEntry.h"
 
 ENTRYAPP(Application)
 
@@ -14,9 +14,16 @@ Application::~Application()
 
 }
 
+VOID Application::GameSetup()
+{
+	PerGameSettings::SetGameName(IDS_PERGAMENAME);
+	PerGameSettings::SetShortName(IDS_SHORTNAME);
+	PerGameSettings::SetMainIcon(IDI_MAINICON);
+}
+
 VOID Application::Initialize()
 {
-	MessageBox(0, L" Loaded! ", 0, 0);
+	Logger::PrintLog(L" Loaded %s! ", L"Blank Project");
 }
 
 VOID Application::Update()

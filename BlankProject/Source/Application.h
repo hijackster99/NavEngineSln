@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Platform/WIN32/IApplication.h"
+#include "Platform/Windows/IApplication.h"
 
 class Application : public IApplication
 {
@@ -8,6 +8,7 @@ public:
 	Application();
 	~Application();
 
+	VOID GameSetup();
 	VOID Initialize();
 	VOID Update();
 };
